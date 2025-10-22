@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Raktimjyoti Sarma - Student Portfolio</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&family=Inconsolata:wght@200..900&family=Jost:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="icon" type="image/x-icon" href="./R Logo.png">
+        <link rel="apple-touch-icon" href="./R Logo.png">
+
+</head>
+
+<body>
+        <nav id="navbar">
+                <div class="nav-container">
+                        <div class="nav-logo">
+                                <img src="./R Logo.png" alt="Profile Picture" class="profile-image">
+                        </div>
+                        <div class="hamburger">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                        </div>
+                        <div class="nav-links">
+                                <a href="#home" class="nav-link">Home</a>
+                                <a href="#about" class="nav-link">About Me</a>
+                                <a href="#projects" class="nav-link">Projects</a>
+                                <a href="#contact" class="nav-link">Connect</a>
+                        </div>
+                </div>
+        </nav>
+
+        <canvas id="matrix-canvas"></canvas>
+        <section id="home" class="hero">
+                <div class="hero-content">
+                        <h1 class="hero-title" id="top-hero-title-text">Raktimjyoti Sarma</h1>
+                        <h1 class="hero-title-blue">
+                                <span class="green">{</span><span class="name">Raktim</span><span class="green">}</span>
+                        </h1>
+                        <!-- <h1 class="hero-title">Sarma</h1> -->
+                        <p class="one-liner" id="top-line">Building tools that make life easier<br>Connecting with
+                                people that make building easier</p>
+                </div>
+        </section>
+
+        <section id="about" class="about">
+                <div class="container">
+                        <h2 class="section-title">About Me</h2>
+                        <p class="about-text">
+                                I come from a small town in the state of Assam (India). I'm a student, who is super
+                                passionate about Computers. I've tried numerous things like game development in Unreal
+                                Engine 4, web development, Python, C, and even Blender. But in present, I'm building
+                                things only in Python.<br><br>
+                        </p>
+                        <p class="about-text">
+                                I always try to build things that not only satisfies me, but also proves helpful to
+                                others. I make most of my projects open-source, so that more people can freely use my
+                                code. My journey in technology has been driven by curiosity and a desire to solve
+                                complex problems with elegant code.<br><br>
+                        </p>
+                        <p class="about-text">
+                                I'm a passionate developer with a keen interest in creating innovative solutions.
+                                With expertise in web development and software engineering, I strive to build
+                                applications that make a difference.
+                        </p>
+                </div>
+        </section>
+
+        <section id="projects" class="projects">
+                <div class="container">
+                        <h2 class="section-title">Projects</h2>
+                        <div class="projects-grid">
+                                <a href="https://github.com/RaktimJS/boron" target="_blank"
+                                        class="project-card latest-project">
+                                        <h3 class="project-title">Boron<span class="arrow">↗</span></h3>
+                                        <p class="project-description">
+                                                A Python tool that turns complex JSON editing into a guided
+                                                conversation.
+                                                Traverse nested structures field-by-field with automatic validation and
+                                                indentation cues. The input system eliminates schema validation entirely
+                                                by design—not optimizing it, but avoiding it. Schemas cache by file
+                                                path,
+                                                maintaining integrity without manual oversight.
+                                        </p>
+                                </a>
+                                <a href="https://github.com/RaktimJS/schoolmanagementsystem" target="_blank"
+                                        class="project-card">
+                                        <h3 class="project-title">School Mgmt. System<span class="arrow">↗</span></h3>
+                                        <p class="project-description">
+                                                Password-secured CLI application performing full CRUD operations on
+                                                student
+                                                records via JSON storage. Features modular architecture, tabulated
+                                                terminal
+                                                output, and demonstrates comprehensive CBSE Python concepts for school
+                                                data
+                                                digitization.
+                                        </p>
+                                </a>
+                        </div>
+                        <!-- <div class="github-link-container">
+                                <button class="github-button" id="toggle-projects">See more</button>
+                        </div> -->
+                </div>
+        </section>
+
+        <section id="contact" class="contact">
+                <div class="container">
+                        <h2 class="section-title">Connect</h2>
+                        <p class="contact-subtitle">GitHub, LinkedIn, X (Twitter), and Email</p>
+                        <div class="contact-links">
+                                <a href="https://github.com/RaktimJS" target="_blank" class="contact-link">GitHub</a>
+                                <a href="https://linkedin.com/in/raktimjs08" target="_blank"
+                                        class="contact-link">LinkedIn</a>
+                                <a href="https://x.com/RaktimJS" target="_blank" class="contact-link">X (Twitter)</a>
+                                <a href="mailto:raktimunreal4@gmail.com" class="contact-link">Email</a>
+                        </div>
+                </div>
+        </section>
+
+        <footer class="footer">
+                <p>&copy; 2025 Raktimjyoti Sarma. All rights reserved.</p>
+        </footer>
+
+        <script type="module" src="/main.js"></script>
+</body>
+
+</html>
