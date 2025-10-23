@@ -494,6 +494,25 @@ body {
         border-color: #00FF41;
 }
 
+.contact-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+        vertical-align: middle;
+        filter: brightness(0) invert(1);
+        transition: all 0.3s ease;
+}
+
+.contact-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.contact-link:hover .contact-icon {
+        filter: brightness(0) invert(0);
+}
+
 .footer {
         background-color: #000;
         color: #888;
