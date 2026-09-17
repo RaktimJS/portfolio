@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap');
+
+@font-face {
+  font-family: "cloister";
+  src: url("cloister.ttf") format("truetype");
+}
+
+:root {
+  --ink: #121212;
+  --paper: #f9f6f0;
+  --font-fraktur: 'UnifrakturMaguntia', cursive;
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'EB Garamond', serif;
+  --font-mono: 'Courier Prime', monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
