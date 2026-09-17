@@ -1,17 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap');
 
 @font-face {
-  font-family: "cloister";
-  src: url("cloister.ttf") format("truetype");
+    font-family: "cloister";
+    src: url("cloister.ttf") format("truetype");
 }
 
 :root {
-  --ink: #121212;
-  --paper: #f9f6f0;
-  --font-fraktur: 'UnifrakturMaguntia', cursive;
-  --font-display: 'Playfair Display', serif;
-  --font-body: 'EB Garamond', serif;
-  --font-mono: 'Courier Prime', monospace;
+    --ink: #121212;
+    --paper: #f9f6f0;
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'EB Garamond', serif;
+    --font-mono: 'Courier Prime', monospace;
 }
 
 * {
@@ -19,3 +18,102 @@
     margin: 0;
     padding: 0;
 }
+
+
+
+
+body {
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.title {
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
+.all-caps {
+    text-transform: uppercase;
+}
+
+.sep-1px {
+    border-top: 1px solid black;
+}
+
+.sep-2px {
+    border-top: 2px solid black;
+}
+
+.sep-3px {
+    border-top: 3px solid black;
+}
+
+
+
+
+.title {
+    display: flex;
+    flex-direction: column;
+}
+
+.place {
+    display: flex;
+    justify-content: space-evenly;
+
+    font-family: var(--font-mono);
+    font-size: 15px;
+
+    margin: 15px 0;
+}
+
+.name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 20px 5px;
+
+    h4 {
+        font-size: 15px;
+        font-family: var(--font-mono);
+        font-weight: 500;
+    }
+
+    #spaced-word {
+        word-spacing: 10px;
+
+    }
+
+    h1 {
+        font-family: cloister;
+        font-size: 70px;
+        font-weight: 400;
+        line-height: 1;
+    }
+
+}
+
+.tags {
+    align-self: center;
+
+    word-spacing: 20px;
+    letter-spacing: 3px;
+
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 900;
+    padding: 8px;
+}
+
+.tagline {
+    align-self: center;
+    padding: 10px;
+    
+    font-family: var(--font-mono);
+    font-size: 14px;
+
+    text-transform: capitalize;
+}   
