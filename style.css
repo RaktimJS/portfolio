@@ -46,8 +46,8 @@ body::after {
         transparent 1px
     );
 
-    background-size: 5px 5px;
-    opacity: 0.35;
+    background-size: 3px 3px;
+    opacity: 0.1;
     pointer-events: none;
 }
 
@@ -163,6 +163,8 @@ body::after {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+
+    padding-top: 14px;
 }
 
 .headline-container {
@@ -178,7 +180,7 @@ body::after {
 }
 
 .headline-container img {
-    filter: grayscale(1) contrast(1.25);
+    filter: grayscale(1) contrast(1);
     width: 330px;
     border: 7px solid var(--ink);
 }
@@ -219,8 +221,6 @@ body::after {
 
     line-height: 1.2;
     margin-top:10px;
-
-    text-align: justify;
 }
 
 .byline {
@@ -346,13 +346,12 @@ body::after {
         font-size: 25px;
         font-family: var(--font-display);
     }
+}
 
-    p {
-        height: inherit;
-        text-align: justify;
-        line-height: 1.3;
-        margin-top: 5px;
-    }
+.about-project p {
+    height: inherit;
+    text-align: justify;
+    line-height: 1.3;
 }
 
 .card img {
@@ -375,13 +374,13 @@ body::after {
     font-family: var(--font-mono);
     font-size: 14px;
 
-    margin-top: 15px;
+    margin-top: 5px;
     margin-bottom: 5px;
 }
 
 .wiki-link {
     padding: 6px 12px 3px 12px;
-    border: 1px solid var(--ink);
+    border: 1px dashed var(--ink);
     color: var(--ink);
 
     text-decoration: none;
@@ -407,33 +406,8 @@ body::after {
 }
 
 .project-name {
-    margin: 10px 0 20px 0;
+    margin: 10px 0 5px;
     border-bottom: 1px solid var(--ink);
-}
-
-.github-button {
-    padding: 15px 20px;
-    border: 1px solid var(--paper);
-
-    width: fit-content;
-    height: fit-content;
-
-    font-weight: bold;
-    font-size: 20px;
-    font-family: var(--font-mono);
-    font-variant: small-caps;
-
-    color: var(--ink);
-}
-
-.container:hover .github-button{
-    border: 1px solid var(--ink);
-    text-decoration: none;
-}
-
-.github-button:hover {
-    background-color: var(--ink);
-    color: var(--paper);
 }
 
 .projects {
@@ -444,15 +418,25 @@ body::after {
 .data {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5px;
 
-    margin-top: var(--spacing);
+    margin: var(--spacing) 0;
     padding-bottom: var(--spacing);
     border-bottom: 3px solid var(--ink);
 }
 
+.achievement:nth-of-type(1),
+.achievement:nth-of-type(3) {
+    border-left: 1px solid var(--ink);
+}
+
+.achievement:nth-of-type(1),
+.achievement:nth-of-type(2) {
+    border-top: 1px solid var(--ink);
+}
+
 .achievement {
-    border: 1px solid var(--ink);
+    border-right: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
 }
 
 .number {
@@ -483,7 +467,7 @@ body::after {
     gap: var(--spacing);
 
     margin-bottom: 100px;
-    padding-bottom: 25px;
+    padding-bottom: var(--spacing);
     border-bottom: 4px solid var(--ink);
 }
 
@@ -526,6 +510,11 @@ body::after {
     font-size: 15px;
 }
 
+.events p:last-child {
+    border-bottom: none;
+    padding: 7px 0 0 0;
+}
+
 .events p:hover .year {
     background-color: var(--ink);
     color: var(--paper);
@@ -558,4 +547,47 @@ body::after {
 
 .links p:last-child{
     margin-bottom: 0;
+}
+
+.about-project .attrib-txt {
+    margin-top: 10px;
+    text-underline-offset: 5px;
+
+    font-family: var(--font-body);
+    font-weight: 900;
+    line-height: 1;
+}
+
+.hook {
+    font-weight: 100;
+    font-size: 25px;
+    text-align: justify;
+}
+
+.back-me {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: var(--font-display);
+
+    padding-top: var(--spacing);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-me a {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+    border: 1px dashed var(--ink);
+
+    color: var(--ink);
+    text-decoration: none;
+    text-align: center;
+}
+
+.back-me a:hover {
+    background-color: var(--ink);
+    color: var(--paper);
 }
