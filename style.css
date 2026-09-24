@@ -14,7 +14,7 @@
     --font-mono: 'Courier Prime', monospace;
     --font-h3: 'Baskervville', serif;
 
-    --max-width: 75vw;
+    --max-width: 1400px;
     --spacing: 25px;
 }
 
@@ -26,7 +26,7 @@
 
 
 
-
+/* Foundation Styling */
 body {
     background-color: var(--paper);
     color: var(--ink);
@@ -94,31 +94,40 @@ body::after {
     margin: 15px 0;
 }
 
+.place-id {
+    width: fit-content;
+}
+
 .name {
     display: flex;
+    gap: 20px;
     align-items: center;
     justify-content: space-between;
 
     padding: 20px 0 5px;
 
-    h4 {
-        font-size: 15px;
-        font-family: var(--font-mono);
-        font-weight: 500;
-    }
+}
 
-    #spaced-word {
-        word-spacing: 10px;
+.motos {
+    font-size: 15px;
+    font-family: var(--font-mono);
+    font-weight: 500;
+}
 
-    }
+#right {
+    text-align: right;
+}
 
-    h1 {
-        font-family: cloister;
-        font-size: 70px;
-        font-weight: 400;
-        line-height: 1;
-    }
+#left {
+    text-align: left;
+}
 
+.page-heading {
+    font-family: cloister;
+    font-size: 70px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1;
 }
 
 .section-header {
@@ -132,7 +141,7 @@ body::after {
     letter-spacing: 3px;
 
     font-family: var(--font-mono);
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 900;
     padding: 8px;
 }
@@ -140,11 +149,12 @@ body::after {
 .tagline {
     align-self: center;
     padding: 10px;
-    
+
     font-family: var(--font-mono);
     font-size: 14px;
 
     text-transform: capitalize;
+    text-align: center;
 }
 
 .main {
@@ -183,6 +193,12 @@ body::after {
     filter: grayscale(1) contrast(1);
     width: 330px;
     border: 7px solid var(--ink);
+}
+
+.image-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .image-holder p{
@@ -247,8 +263,12 @@ body::after {
     grid-template-columns: repeat(3, 1fr);
 }
 
+.headline-links-holder a {
+    max-height: fit-content;
+}
+
 .hero-cta {
-    padding: 10px var(--spacing);
+    padding: 10px 0;
     border-top: 1px solid var(--paper);
     border-left: 1px solid var(--paper);
     border-bottom: 1px solid var(--paper);
@@ -590,4 +610,147 @@ body::after {
 .back-me a:hover {
     background-color: var(--ink);
     color: var(--paper);
+}
+
+
+/* Media queries */
+@media (max-width: 1450px) {
+    body {
+        padding: 0 var(--spacing);
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 100vw;
+    }
+
+    .data {
+        grid-template-columns: 1fr;
+    }
+
+    .achievement:nth-of-type(1),
+    .achievement:nth-of-type(2),
+    .achievement:nth-of-type(3),
+    .achievement:nth-of-type(4) {
+        border-right: 1px solid var(--ink);
+        border-left: 1px solid var(--ink);
+        border-top: 1px solid var(--ink);
+        border-bottom: none;
+    }
+
+    .achievement:last-child {
+        border-bottom: 1px solid var(--ink);
+    }
+}
+
+@media (max-width: 1100px) {
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .headline-container {
+        grid-template-columns: 1fr;
+    }
+
+    .image-holder {
+        position: absolute;
+        visibility: hidden;
+    }
+
+    .headline-content {
+        padding: 0;
+        border: 0;
+    }
+
+    .achievement-description {
+        text-wrap: inherit;
+    }
+}
+
+@media (max-width: 1050px) {
+    .secondary-main {
+        grid-template-columns: 1fr;
+    }
+
+    .data:last-child {
+        border-top: 0;
+    }
+
+    .achievement:first-child {
+        border-top: 1px solid var(--ink);
+    }
+
+    .aside-container {
+        padding: 0;
+        border: 0;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing)
+    }
+
+    .aside-content {
+        margin: 0;
+    }
+
+    .aside-content:first-child {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 800px) {
+    .motos {
+        font-size: 12px;
+    }
+
+    .page-heading {
+        font-size: 40px;
+    }
+
+    .tags {
+        font-size: 12px;
+    }
+
+    .tagline {
+        font-size: 12px;
+    }
+
+    .headline {
+        font-size: 30px;
+    }
+
+    .content h3 {
+        font-size: 20px;
+    }
+
+    .number {
+        font-size: 30px;
+    }
+
+    .aside-container {
+        grid-template-columns: 1fr;
+    }
+
+    .aside-content:first-child {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 750px) {
+    .place {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 550px) {
+    .card img {
+        position: absolute;
+        visibility: hidden;
+    }
+
+    .project-name {
+        margin-top: 0px;
+    }
 }
