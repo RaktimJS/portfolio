@@ -276,7 +276,7 @@ body::after {
 
     font-family: var(--font-mono);
     font-size: 18px;
-    font-variant: small-caps;
+    text-transform: uppercase;
 
     text-align: center;
 
@@ -297,6 +297,11 @@ body::after {
     text-underline-offset: 5px;
     text-decoration: underline;
     text-decoration-style: dotted;
+}
+
+.container:hover .read-button {
+    text-decoration: none;
+    border: 1px solid var(--ink);
 }
 
 .hero-cta:hover {
@@ -491,6 +496,22 @@ body::after {
     border-bottom: 4px solid var(--ink);
 }
 
+.read-full-story {
+    display: flex;
+
+}
+
+.read-button {
+    padding: 10px 30px;
+    border: 1px solid var(--paper);
+    margin: 0 auto;
+
+    color: var(--ink);
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-family: var(--font-mono);
+}
+
 .aside-container {
     border-left: 3px solid var(--ink);
     padding-left: var(--spacing);
@@ -582,6 +603,8 @@ body::after {
     font-weight: 100;
     font-size: 25px;
     text-align: justify;
+
+    margin-bottom: var(--spacing);
 }
 
 .back-me {
@@ -655,6 +678,18 @@ body::after {
 
     .headline-container {
         grid-template-columns: 1fr;
+    }
+
+    .headline {
+        font-size: 40px;
+    }
+
+    .text h3 {
+        font-size: 20px;
+    }
+
+    .number {
+        font-size: 25px;
     }
 
     .image p {
@@ -799,6 +834,11 @@ body::after {
         align-items: center;
         width: 330px;
     }
+
+    .image p {
+        visibility: visible;
+        position: relative;
+    }
 }
 
 @media (max-width: 680px) {
@@ -815,11 +855,6 @@ body::after {
     .image-holder  .watermark {
         visibility: hidden;
         position: absolute;
-    }
-
-    .image p {
-        visibility: visible;
-        position: relative;
     }
 
     .hero-cta {
@@ -857,6 +892,11 @@ body::after {
     .card img {
         position: absolute;
         visibility: hidden;
+    }
+
+    .github img {
+        position: relative;
+        visibility: visible;
     }
 
     .project-name {
